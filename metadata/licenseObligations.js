@@ -50,5 +50,8 @@ module.exports = {
     'CC0': {
     },
     'Public domain': {
+    },
+    'UNLICENSE': {
+        fullName: 'The Unlicense'
     }
 };
