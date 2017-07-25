@@ -55,5 +55,8 @@ module.exports = {
     },
     'PUBLIC DOMAIN': {
         fullName: 'Public Domain'
+    },
+    'UNLICENSE': {
+        fullName: 'The Unlicense'
     }
 };
