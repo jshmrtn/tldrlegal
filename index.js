@@ -32,7 +32,7 @@ var results = {}, unknownLicenses = [];
 // Traverse all dependencies
 for (var packageName in packages) {
     // Get SPDX license code
-    var license = licensing.getPreferredPackageLicense(packages[packageName]);
+    var license = licensing.getPreferredPackageLicense(packages[packageName]).toUpperCase();
 
     // Get obligations for this license
     var obligations = licenseObligations[license];
@@ -48,6 +48,10 @@ for (var packageName in packages) {
 
     // Traverse obligations for this license
     for (var obligation in obligations) {
+        if (obligation === 'fullName') {
+            continue;
+        }
+
         // Is this an irrelevant obligation?
         if (licensing.isIrrelevant(obligation)) {
             continue;
@@ -59,7 +63,7 @@ for (var packageName in packages) {
         }
 
         // Add current package and its license under this obligation
-        results[obligation].push({name: packageName, license: license});
+        results[obligation].push({name: packageName, license: obligations.fullName || license});
     }
 }
 

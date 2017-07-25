@@ -8,7 +8,8 @@ module.exports = {
         includeLicense: true,
         includeCopyright: true
     },
-    'Apache 2.0': {
+    'APACHE 2.0': {
+        fullName: 'Apache 2.0',
         stateChanges: true,
         includeNotice: true,
         includeLicense: true,
@@ -19,15 +20,18 @@ module.exports = {
         discloseSource: true,
         includeCopyright: true
     },
-    'BSD 2 Clause': {
+    'BSD 2 CLAUSE': {
+        fullName: 'BSD 2 Clause',
         includeLicense: true,
         includeCopyright: true
     },
-    'BSD 3 Clause': {
+    'BSD 3 CLAUSE': {
+        fullName: 'BSD 3 Clause',
         includeLicense: true,
         includeCopyright: true
     },
-    'BSD 4 Clause': {
+    'BSD 4 CLAUSE': {
+        fullName: 'BSD 4 Clause',
         giveCredit: true,
         includeLicense: true,
         includeCopyright: true
@@ -49,6 +53,7 @@ module.exports = {
     },
     'CC0': {
     },
-    'Public domain': {
+    'PUBLIC DOMAIN': {
+        fullName: 'Public Domain'
     }
 };
